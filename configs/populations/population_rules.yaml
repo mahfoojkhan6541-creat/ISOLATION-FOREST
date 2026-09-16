@@ -1,0 +1,25 @@
+population_policy_version: "pop_v1"
+description: "Reference population selection and validation policy"
+
+hierarchical_levels:
+  level_1:
+    name: "same_lot_same_checkpoint"
+    keys:
+      - "checkpoint"
+    min_population_size: 10
+    target_exclusion: true
+    fallback_level: "level_2"
+
+  level_2:
+    name: "cross_lot_same_checkpoint"
+    keys:
+      - "checkpoint"
+    min_population_size: 5
+    target_exclusion: true
+    fallback_level: "no_reference"
+
+validation:
+  min_comparable_components: 5
+  require_valid_quality_peers: true
+  exclude_target_from_reference: true
+  prevent_future_leakage: true

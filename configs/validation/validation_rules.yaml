@@ -1,0 +1,69 @@
+validation_version: "val_v1"
+description: "Data-quality validation rules covering the 12 master decomposition cases"
+
+rules:
+  case_01_missing_reading:
+    name: "Missing Reading Check"
+    description: "Detects completely empty or missing required parameter rows"
+    severity: "QUARANTINE"
+    max_missing_ratio_per_component: 0.50
+
+  case_02_partial_missingness:
+    name: "Partial Missingness Check"
+    description: "Detects records where some optional or non-critical parameters are NaN"
+    severity: "WARNING"
+    allow_imputation: false
+
+  case_03_sensor_error:
+    name: "Sensor Error Check"
+    description: "Detects infinite, NaN, or non-numeric corrupted values in parameter streams"
+    severity: "BLOCK"
+
+  case_04_duplicate_reading:
+    name: "Duplicate Reading Check"
+    description: "Detects exact identical measurement records for the same component and timestamp"
+    severity: "WARNING"
+    action: "flag_and_deduplicate_preserve_provenance"
+
+  case_05_wrong_timestamp:
+    name: "Wrong Timestamp Check"
+    description: "Detects unparseable or negative chronological progression within a step"
+    severity: "QUARANTINE"
+
+  case_06_wrong_component_id:
+    name: "Wrong Component ID Check"
+    description: "Detects missing, blank, or malformed component identifiers"
+    severity: "BLOCK"
+
+  case_07_wrong_unit:
+    name: "Wrong Unit Check"
+    description: "Detects unrecognized or unconvertible unit declarations"
+    severity: "BLOCK"
+
+  case_08_measurement_saturation:
+    name: "Measurement Saturation Check"
+    description: "Detects values pinned at extreme numerical bounds indicating ADC rail saturation"
+    severity: "WARNING"
+    saturation_threshold_sigma: 6.0
+
+  case_09_sensor_noise:
+    name: "Sensor Noise / Quantization Check"
+    description: "Detects flatline zero-variance sequences indicating dead sensors"
+    severity: "WARNING"
+    min_variance_threshold: 1e-12
+
+  case_10_communication_failure:
+    name: "Communication Failure Check"
+    description: "Detects abrupt truncated blocks or missing intermediate steps in batch arrival"
+    severity: "QUARANTINE"
+
+  case_11_out_of_order_records:
+    name: "Out of Order Records Check"
+    description: "Detects observations arriving with non-sequential time ordering"
+    severity: "WARNING"
+    action: "sort_by_time_preserve_arrival_order"
+
+  case_12_clock_mismatch:
+    name: "Clock Mismatch Check"
+    description: "Detects gross drift or discontinuity between instrument and system timestamps"
+    severity: "WARNING"

@@ -1,0 +1,3113 @@
+<!doctype html><html><head><meta charset='utf-8'><title>Burn-In Screening Report</title><style>body{font-family:Arial,sans-serif;margin:32px;color:#102a43}table{border-collapse:collapse;width:100%;font-size:12px}th,td{border:1px solid #d9e2ec;padding:8px;vertical-align:top}th{background:#243b53;color:white}.note{background:#fff8e1;padding:12px;border-left:4px solid #d69e2e}</style></head><body><h1>Burn-In Screening Report</h1><p class='note'><strong>Decision-support only.</strong> This report is deterministic and explainable, but it does not replace an approved engineering or flight-qualification decision.</p><p><strong>Action counts:</strong> PASS 71 · REVIEW 199 · REJECT 10</p><h2>Evaluation summary</h2><pre>{
+  "mae": 0.43249125376930087,
+  "bias": 1.6526462737991616e-14,
+  "rmse": 0.601789259402296,
+  "recall": 0.95,
+  "false_negative_rate": 0.05,
+  "precision": 0.18181818181818182,
+  "false_negative_count": 2,
+  "interval_coverage_90": 0.9,
+  "screened_series": 280,
+  "action_counts": {
+    "REVIEW": 199,
+    "PASS": 71,
+    "REJECT": 10
+  },
+  "early_decision_contract": "Only 0h and 24h values are used by the forecasting and screening decision path."
+}</pre><h2>Component decisions</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>component_id</th>
+      <th>lot_id</th>
+      <th>parameter</th>
+      <th>value_24h</th>
+      <th>predicted_168h</th>
+      <th>prediction_interval_90</th>
+      <th>action</th>
+      <th>reason_codes</th>
+      <th>explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>L02-C016</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.584951</td>
+      <td>5.097443</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.58495; predicted 168-hour value is 5.09744 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C002</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.010681</td>
+      <td>9.301933</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 9.01068; predicted 168-hour value is 9.30193 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C028</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.403122</td>
+      <td>4.736367</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.40312; predicted 168-hour value is 4.73637 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C027</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.401189</td>
+      <td>3.682301</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 3.40119; predicted 168-hour value is 3.6823 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C020</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.608470</td>
+      <td>11.137026</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.6085; predicted 168-hour value is 11.137 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C010</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.330022</td>
+      <td>9.949859</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 9.33002; predicted 168-hour value is 9.94986 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C011</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.826935</td>
+      <td>11.249210</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.8269; predicted 168-hour value is 11.2492 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C016</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.101695</td>
+      <td>4.440951</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.1017; predicted 168-hour value is 4.44095 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C010</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.212682</td>
+      <td>4.975128</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.21268; predicted 168-hour value is 4.97513 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C003</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.269733</td>
+      <td>4.798763</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.26973; predicted 168-hour value is 4.79876 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C016</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.230340</td>
+      <td>10.727005</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.2303; predicted 168-hour value is 10.727 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C028</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.679206</td>
+      <td>4.915561</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.67921; predicted 168-hour value is 4.91556 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C023</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.757107</td>
+      <td>5.028783</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.75711; predicted 168-hour value is 5.02878 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C011</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.226024</td>
+      <td>3.791726</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 3.22602; predicted 168-hour value is 3.79173 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C017</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.116457</td>
+      <td>10.428707</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.1165; predicted 168-hour value is 10.4287 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C011</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.104386</td>
+      <td>10.423483</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.1044; predicted 168-hour value is 10.4235 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C010</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.030803</td>
+      <td>4.319575</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.0308; predicted 168-hour value is 4.31957 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C010</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.017353</td>
+      <td>10.569486</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.0174; predicted 168-hour value is 10.5695 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C018</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.634777</td>
+      <td>4.879414</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.63478; predicted 168-hour value is 4.87941 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C021</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>3.874640</td>
+      <td>4.239483</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 3.87464; predicted 168-hour value is 4.23948 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C008</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.353542</td>
+      <td>4.885280</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.35354; predicted 168-hour value is 4.88528 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C025</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.474234</td>
+      <td>5.047118</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.47423; predicted 168-hour value is 5.04712 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C019</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.487916</td>
+      <td>4.842545</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.48792; predicted 168-hour value is 4.84254 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C005</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.169927</td>
+      <td>10.858202</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.1699; predicted 168-hour value is 10.8582 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C024</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.327537</td>
+      <td>4.626806</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.32754; predicted 168-hour value is 4.62681 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C003</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.818239</td>
+      <td>5.497396</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.81824; predicted 168-hour value is 5.4974 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C028</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.603605</td>
+      <td>4.085934</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 3.6036; predicted 168-hour value is 4.08593 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C019</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>9.440481</td>
+      <td>9.870094</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 9.44048; predicted 168-hour value is 9.87009 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C015</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.900702</td>
+      <td>5.374404</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.9007; predicted 168-hour value is 5.3744 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C025</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>9.971282</td>
+      <td>10.393921</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 9.97128; predicted 168-hour value is 10.3939 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C002</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.053991</td>
+      <td>4.767336</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.05399; predicted 168-hour value is 4.76734 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C022</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.337642</td>
+      <td>4.638987</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.33764; predicted 168-hour value is 4.63899 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C015</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.011817</td>
+      <td>4.312408</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.01182; predicted 168-hour value is 4.31241 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C020</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.128868</td>
+      <td>9.735194</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 9.12887; predicted 168-hour value is 9.73519 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C026</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.394549</td>
+      <td>11.217368</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.3945; predicted 168-hour value is 11.2174 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C012</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>9.971216</td>
+      <td>10.658279</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 9.97122; predicted 168-hour value is 10.6583 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C017</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.387424</td>
+      <td>11.209774</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.3874; predicted 168-hour value is 11.2098 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C017</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.382939</td>
+      <td>4.929884</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.38294; predicted 168-hour value is 4.92988 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C022</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.258767</td>
+      <td>10.557563</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.2588; predicted 168-hour value is 10.5576 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C018</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.108156</td>
+      <td>3.404115</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 3.10816; predicted 168-hour value is 3.40412 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C028</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.438699</td>
+      <td>4.736172</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.4387; predicted 168-hour value is 4.73617 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C002</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.795885</td>
+      <td>5.398602</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.79589; predicted 168-hour value is 5.3986 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C021</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.441056</td>
+      <td>4.757047</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.44106; predicted 168-hour value is 4.75705 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C013</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.481628</td>
+      <td>10.947689</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.4816; predicted 168-hour value is 10.9477 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C007</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.266555</td>
+      <td>10.777500</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.2666; predicted 168-hour value is 10.7775 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C009</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.212906</td>
+      <td>9.559179</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 9.21291; predicted 168-hour value is 9.55918 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C020</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.099419</td>
+      <td>4.499749</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.09942; predicted 168-hour value is 4.49975 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C007</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.683156</td>
+      <td>11.100443</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.6832; predicted 168-hour value is 11.1004 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C014</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.231823</td>
+      <td>9.620909</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 9.23182; predicted 168-hour value is 9.62091 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C009</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.420355</td>
+      <td>5.009160</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.42035; predicted 168-hour value is 5.00916 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C027</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>9.663106</td>
+      <td>10.204417</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 9.66311; predicted 168-hour value is 10.2044 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C018</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.515478</td>
+      <td>10.838583</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.5155; predicted 168-hour value is 10.8386 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C017</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.585048</td>
+      <td>11.209989</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.585; predicted 168-hour value is 11.21 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C009</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.198925</td>
+      <td>4.599993</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.19893; predicted 168-hour value is 4.59999 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C017</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.653670</td>
+      <td>4.984813</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.65367; predicted 168-hour value is 4.98481 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C024</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.523188</td>
+      <td>11.195636</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.5232; predicted 168-hour value is 11.1956 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C001</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.293689</td>
+      <td>10.653412</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.2937; predicted 168-hour value is 10.6534 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C025</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.318962</td>
+      <td>10.975792</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 10.319; predicted 168-hour value is 10.9758 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C023</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>9.852621</td>
+      <td>10.257372</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 9.85262; predicted 168-hour value is 10.2574 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C014</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>9.856400</td>
+      <td>10.288246</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 9.8564; predicted 168-hour value is 10.2882 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C017</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.118720</td>
+      <td>9.490046</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 9.11872; predicted 168-hour value is 9.49005 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C003</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>9.750178</td>
+      <td>10.294645</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 9.75018; predicted 168-hour value is 10.2946 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C001</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.740406</td>
+      <td>5.058532</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.74041; predicted 168-hour value is 5.05853 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C020</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.257269</td>
+      <td>3.584900</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 3.25727; predicted 168-hour value is 3.5849 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C024</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.258457</td>
+      <td>3.593126</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 3.25846; predicted 168-hour value is 3.59313 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C015</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.281255</td>
+      <td>3.617601</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 3.28125; predicted 168-hour value is 3.6176 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C020</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>9.833003</td>
+      <td>10.254097</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 9.833; predicted 168-hour value is 10.2541 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C019</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.091206</td>
+      <td>4.528555</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.09121; predicted 168-hour value is 4.52855 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C011</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.052606</td>
+      <td>4.449713</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.05261; predicted 168-hour value is 4.44971 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C020</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.291872</td>
+      <td>4.776044</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.29187; predicted 168-hour value is 4.77604 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C006</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.735433</td>
+      <td>5.123792</td>
+      <td>0.979418</td>
+      <td>PASS</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>PASS: 24-hour value is 4.73543; predicted 168-hour value is 5.12379 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C021</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>55.261940</td>
+      <td>59.131692</td>
+      <td>0.979418</td>
+      <td>REJECT</td>
+      <td>["ABSOLUTE_LIMIT_EXCEEDED", "PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE", "PREDICTED_168H_LIMIT_BREACH", "SAFETY_SLOPE_EXCEEDED"]</td>
+      <td>REJECT: 24-hour value is 55.2619; predicted 168-hour value is 59.1317 ± 0.979418. The 24-hour measurement is outside the supplied specification limit. The 24-hour value is 80.44 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 3.65 robust deviations from the peer slope median. The uncertainty-adjusted 168-hour forecast crosses a supplied specification limit. The early slope (0.0266231/h) is above the configured upper safety slope (-0.0365413/h) using the remaining_limit policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C021</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>22.261765</td>
+      <td>24.793104</td>
+      <td>0.979418</td>
+      <td>REJECT</td>
+      <td>["ABSOLUTE_LIMIT_EXCEEDED", "PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE", "PREDICTED_168H_LIMIT_BREACH", "SAFETY_SLOPE_EXCEEDED"]</td>
+      <td>REJECT: 24-hour value is 22.2618; predicted 168-hour value is 24.7931 ± 0.979418. The 24-hour measurement is outside the supplied specification limit. The 24-hour value is 54.73 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.66 robust deviations from the peer slope median. The uncertainty-adjusted 168-hour forecast crosses a supplied specification limit. The early slope (0.0129096/h) is above the configured upper safety slope (-0.0157067/h) using the remaining_limit policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C024</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>55.875346</td>
+      <td>58.005943</td>
+      <td>0.979418</td>
+      <td>REJECT</td>
+      <td>["ABSOLUTE_LIMIT_EXCEEDED", "PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE", "PREDICTED_168H_LIMIT_BREACH", "SAFETY_SLOPE_EXCEEDED"]</td>
+      <td>REJECT: 24-hour value is 55.8753; predicted 168-hour value is 58.0059 ± 0.979418. The 24-hour measurement is outside the supplied specification limit. The 24-hour value is 79.64 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.50 robust deviations from the peer slope median. The uncertainty-adjusted 168-hour forecast crosses a supplied specification limit. The early slope (0.0119589/h) is above the configured upper safety slope (-0.040801/h) using the remaining_limit policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C024</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>23.238856</td>
+      <td>25.958102</td>
+      <td>0.979418</td>
+      <td>REJECT</td>
+      <td>["ABSOLUTE_LIMIT_EXCEEDED", "PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE", "PREDICTED_168H_LIMIT_BREACH", "SAFETY_SLOPE_EXCEEDED"]</td>
+      <td>REJECT: 24-hour value is 23.2389; predicted 168-hour value is 25.9581 ± 0.979418. The 24-hour measurement is outside the supplied specification limit. The 24-hour value is 60.63 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.82 robust deviations from the peer slope median. The uncertainty-adjusted 168-hour forecast crosses a supplied specification limit. The early slope (0.0138826/h) is above the configured upper safety slope (-0.0224921/h) using the remaining_limit policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C016</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>53.849664</td>
+      <td>56.317511</td>
+      <td>0.979418</td>
+      <td>REJECT</td>
+      <td>["ABSOLUTE_LIMIT_EXCEEDED", "PEER_DEVIATION_HIGH", "PREDICTED_168H_LIMIT_BREACH", "SAFETY_SLOPE_EXCEEDED"]</td>
+      <td>REJECT: 24-hour value is 53.8497; predicted 168-hour value is 56.3175 ± 0.979418. The 24-hour measurement is outside the supplied specification limit. The 24-hour value is 141.44 robust deviations from its lot/device/parameter peer median. The uncertainty-adjusted 168-hour forecast crosses a supplied specification limit. The early slope (-0.00291513/h) is above the configured upper safety slope (-0.0267338/h) using the remaining_limit policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C016</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>21.106290</td>
+      <td>23.053905</td>
+      <td>0.979418</td>
+      <td>REJECT</td>
+      <td>["ABSOLUTE_LIMIT_EXCEEDED", "PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE", "PREDICTED_168H_LIMIT_BREACH", "SAFETY_SLOPE_EXCEEDED"]</td>
+      <td>REJECT: 24-hour value is 21.1063; predicted 168-hour value is 23.0539 ± 0.979418. The 24-hour measurement is outside the supplied specification limit. The 24-hour value is 32.73 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 2.09 robust deviations from the peer slope median. The uncertainty-adjusted 168-hour forecast crosses a supplied specification limit. The early slope (0.00985008/h) is above the configured upper safety slope (-0.00768257/h) using the remaining_limit policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C019</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>50.946219</td>
+      <td>53.772853</td>
+      <td>0.979418</td>
+      <td>REJECT</td>
+      <td>["ABSOLUTE_LIMIT_EXCEEDED", "PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE", "PREDICTED_168H_LIMIT_BREACH", "SAFETY_SLOPE_EXCEEDED"]</td>
+      <td>REJECT: 24-hour value is 50.9462; predicted 168-hour value is 53.7729 ± 0.979418. The 24-hour measurement is outside the supplied specification limit. The 24-hour value is 132.25 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.56 robust deviations from the peer slope median. The uncertainty-adjusted 168-hour forecast crosses a supplied specification limit. The early slope (0.0121761/h) is above the configured upper safety slope (-0.00657097/h) using the remaining_limit policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C019</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>21.063198</td>
+      <td>24.721504</td>
+      <td>0.979418</td>
+      <td>REJECT</td>
+      <td>["ABSOLUTE_LIMIT_EXCEEDED", "PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE", "PREDICTED_168H_LIMIT_BREACH", "SAFETY_SLOPE_EXCEEDED"]</td>
+      <td>REJECT: 24-hour value is 21.0632; predicted 168-hour value is 24.7215 ± 0.979418. The 24-hour measurement is outside the supplied specification limit. The 24-hour value is 32.65 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 4.82 robust deviations from the peer slope median. The uncertainty-adjusted 168-hour forecast crosses a supplied specification limit. The early slope (0.0214141/h) is above the configured upper safety slope (-0.00738332/h) using the remaining_limit policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C001</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>54.580559</td>
+      <td>58.007318</td>
+      <td>0.979418</td>
+      <td>REJECT</td>
+      <td>["ABSOLUTE_LIMIT_EXCEEDED", "PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE", "PREDICTED_168H_LIMIT_BREACH", "SAFETY_SLOPE_EXCEEDED"]</td>
+      <td>REJECT: 24-hour value is 54.5806; predicted 168-hour value is 58.0073 ± 0.979418. The 24-hour measurement is outside the supplied specification limit. The 24-hour value is 98.60 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.95 robust deviations from the peer slope median. The uncertainty-adjusted 168-hour forecast crosses a supplied specification limit. The early slope (0.0235618/h) is above the configured upper safety slope (-0.0318094/h) using the remaining_limit policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C001</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>22.364585</td>
+      <td>26.011399</td>
+      <td>0.979418</td>
+      <td>REJECT</td>
+      <td>["ABSOLUTE_LIMIT_EXCEEDED", "PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE", "PREDICTED_168H_LIMIT_BREACH", "SAFETY_SLOPE_EXCEEDED"]</td>
+      <td>REJECT: 24-hour value is 22.3646; predicted 168-hour value is 26.0114 ± 0.979418. The 24-hour measurement is outside the supplied specification limit. The 24-hour value is 79.23 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 2.96 robust deviations from the peer slope median. The uncertainty-adjusted 168-hour forecast crosses a supplied specification limit. The early slope (0.0186071/h) is above the configured upper safety slope (-0.0164207/h) using the remaining_limit policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C026</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>11.587246</td>
+      <td>13.806989</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 11.5872; predicted 168-hour value is 13.807 ± 0.979418. The 24-hour value is 1.96 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 2.61 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L05-C027</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>9.035695</td>
+      <td>9.410803</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 9.0357; predicted 168-hour value is 9.4108 ± 0.979418. The 24-hour value is 2.87 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.73 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L04-C025</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.520764</td>
+      <td>7.352389</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.52076; predicted 168-hour value is 7.35239 ± 0.979418. The 24-hour value is 1.52 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 3.42 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L01-C006</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>9.571694</td>
+      <td>10.398420</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 9.57169; predicted 168-hour value is 10.3984 ± 0.979418. The 24-hour value is 1.49 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 3.43 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C009</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>11.204301</td>
+      <td>13.380085</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 11.2043; predicted 168-hour value is 13.3801 ± 0.979418. The 24-hour value is 1.29 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 2.62 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L04-C009</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>10.539388</td>
+      <td>13.434898</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.5394; predicted 168-hour value is 13.4349 ± 0.979418. The 24-hour value is 1.24 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 2.62 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C014</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>3.660442</td>
+      <td>3.805192</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 3.66044; predicted 168-hour value is 3.80519 ± 0.979418. The 24-hour value is 3.53 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.10 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C026</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>5.176315</td>
+      <td>7.238463</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 5.17631; predicted 168-hour value is 7.23846 ± 0.979418. The 24-hour value is 1.44 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 2.08 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L03-C008</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>10.034333</td>
+      <td>10.620171</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 10.0343; predicted 168-hour value is 10.6202 ± 0.979418. The 24-hour value is 2.73 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C026</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>3.965177</td>
+      <td>4.163364</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 3.96518; predicted 168-hour value is 4.16336 ± 0.979418. The 24-hour value is 2.05 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.23 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L05-C015</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.785112</td>
+      <td>6.380800</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.78511; predicted 168-hour value is 6.3808 ± 0.979418. The 24-hour value is 1.57 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.85 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L05-C016</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>11.574774</td>
+      <td>12.883391</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 11.5748; predicted 168-hour value is 12.8834 ± 0.979418. The 24-hour value is 2.79 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L02-C012</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.001157</td>
+      <td>4.156569</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.00116; predicted 168-hour value is 4.15657 ± 0.979418. The 24-hour value is 2.41 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C021</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>9.335928</td>
+      <td>9.532577</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 9.33593; predicted 168-hour value is 9.53258 ± 0.979418. The 24-hour value is 2.20 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C001</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.689079</td>
+      <td>6.811674</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.68908; predicted 168-hour value is 6.81167 ± 0.979418. The 24-hour value is 1.18 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 2.07 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L04-C028</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>3.530223</td>
+      <td>4.520844</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 3.53022; predicted 168-hour value is 4.52084 ± 0.979418. The 24-hour value is 1.72 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.34 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C007</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>3.816785</td>
+      <td>3.973734</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 3.81678; predicted 168-hour value is 3.97373 ± 0.979418. The 24-hour value is 3.02 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L04-C009</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.304916</td>
+      <td>7.060644</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.30492; predicted 168-hour value is 7.06064 ± 0.979418. The 24-hour value is 0.81 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 3.39 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C013</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>11.342999</td>
+      <td>12.638446</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 11.343; predicted 168-hour value is 12.6384 ± 0.979418. The 24-hour value is 1.53 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.52 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L05-C015</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>11.519683</td>
+      <td>12.570196</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 11.5197; predicted 168-hour value is 12.5702 ± 0.979418. The 24-hour value is 2.67 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C018</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>3.752528</td>
+      <td>4.263714</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 3.75253; predicted 168-hour value is 4.26371 ± 0.979418. The 24-hour value is 2.99 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C004</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.058957</td>
+      <td>4.266778</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.05896; predicted 168-hour value is 4.26678 ± 0.979418. The 24-hour value is 1.64 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.30 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L03-C011</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.894785</td>
+      <td>10.679659</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 9.89479; predicted 168-hour value is 10.6797 ± 0.979418. The 24-hour value is 2.29 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C013</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>7.833411</td>
+      <td>8.044770</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 7.83341; predicted 168-hour value is 8.04477 ± 0.979418. The 24-hour value is 4.23 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C006</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.945965</td>
+      <td>5.712347</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.94597; predicted 168-hour value is 5.71235 ± 0.979418. The 24-hour value is 2.28 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C002</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>5.092994</td>
+      <td>5.745193</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 5.09299; predicted 168-hour value is 5.74519 ± 0.979418. The 24-hour value is 2.93 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L02-C008</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.164226</td>
+      <td>4.330683</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.16423; predicted 168-hour value is 4.33068 ± 0.979418. The 24-hour value is 1.88 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C025</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>3.501931</td>
+      <td>3.914649</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 3.50193; predicted 168-hour value is 3.91465 ± 0.979418. The 24-hour value is 4.10 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C005</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.966558</td>
+      <td>5.729469</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.96656; predicted 168-hour value is 5.72947 ± 0.979418. The 24-hour value is 2.37 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C023</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.054206</td>
+      <td>4.250917</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.05421; predicted 168-hour value is 4.25092 ± 0.979418. The 24-hour value is 1.66 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.05 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L03-C017</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>2.978440</td>
+      <td>4.669489</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 2.97844; predicted 168-hour value is 4.66949 ± 0.979418. The 0h to 24h slope is 2.38 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C020</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>9.784204</td>
+      <td>10.889731</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 9.7842; predicted 168-hour value is 10.8897 ± 0.979418. The 24-hour value is 1.20 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.59 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L03-C005</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.629774</td>
+      <td>10.143004</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 9.62977; predicted 168-hour value is 10.143 ± 0.979418. The 24-hour value is 1.45 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.23 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L05-C003</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.759281</td>
+      <td>5.198259</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.75928; predicted 168-hour value is 5.19826 ± 0.979418. The 24-hour value is 1.46 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.21 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L04-C004</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>11.189675</td>
+      <td>11.942933</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 11.1897; predicted 168-hour value is 11.9429 ± 0.979418. The 24-hour value is 2.33 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L02-C002</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.025686</td>
+      <td>10.485013</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.0257; predicted 168-hour value is 10.485 ± 0.979418. The 24-hour value is 0.78 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 2.10 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L05-C014</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.798634</td>
+      <td>5.789641</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.79863; predicted 168-hour value is 5.78964 ± 0.979418. The 24-hour value is 1.63 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C013</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>9.741012</td>
+      <td>10.095188</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 9.74101; predicted 168-hour value is 10.0952 ± 0.979418. The 24-hour value is 1.19 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.53 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L03-C023</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.095066</td>
+      <td>5.926653</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 3.09507; predicted 168-hour value is 5.92665 ± 0.979418. The 0h to 24h slope is 3.46 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L04-C004</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.510402</td>
+      <td>5.073157</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.5104; predicted 168-hour value is 5.07316 ± 0.979418. The 24-hour value is 1.48 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.02 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L04-C008</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>9.278811</td>
+      <td>9.651040</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 9.27881; predicted 168-hour value is 9.65104 ± 0.979418. The 24-hour value is 0.88 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.84 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L05-C019</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>11.047656</td>
+      <td>11.553510</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 11.0477; predicted 168-hour value is 11.5535 ± 0.979418. The 24-hour value is 1.61 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L04-C016</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>10.253764</td>
+      <td>10.884017</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.2538; predicted 168-hour value is 10.884 ± 0.979418. The 24-hour value is 0.76 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.96 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L04-C011</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>8.750705</td>
+      <td>9.444521</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 8.7507; predicted 168-hour value is 9.44452 ± 0.979418. The 24-hour value is 1.77 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C003</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>8.680045</td>
+      <td>8.914622</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 8.68004; predicted 168-hour value is 8.91462 ± 0.979418. The 24-hour value is 1.55 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C025</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.050877</td>
+      <td>9.598851</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 9.05088; predicted 168-hour value is 9.59885 ± 0.979418. The 0h to 24h slope is 2.41 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C021</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>11.677035</td>
+      <td>12.359825</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 11.677; predicted 168-hour value is 12.3598 ± 0.979418. The 24-hour value is 2.12 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C023</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.289104</td>
+      <td>11.100583</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 9.2891; predicted 168-hour value is 11.1006 ± 0.979418. The 0h to 24h slope is 2.36 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L05-C016</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.371341</td>
+      <td>9.189687</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.37134; predicted 168-hour value is 9.18969 ± 0.979418. The 0h to 24h slope is 4.38 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L04-C006</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.647066</td>
+      <td>5.444198</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.64707; predicted 168-hour value is 5.4442 ± 0.979418. The 24-hour value is 1.93 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L04-C007</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>8.948766</td>
+      <td>9.823595</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 8.94877; predicted 168-hour value is 9.82359 ± 0.979418. The 24-hour value is 1.43 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C004</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.788966</td>
+      <td>12.470528</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.789; predicted 168-hour value is 12.4705 ± 0.979418. The 0h to 24h slope is 1.87 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L04-C013</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>9.269995</td>
+      <td>9.576328</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 9.26999; predicted 168-hour value is 9.57633 ± 0.979418. The 24-hour value is 0.89 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.57 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C027</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.285065</td>
+      <td>4.972817</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.28507; predicted 168-hour value is 4.97282 ± 0.979418. The 24-hour value is 1.48 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L02-C009</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.679175</td>
+      <td>8.417462</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.67917; predicted 168-hour value is 8.41746 ± 0.979418. The 0h to 24h slope is 3.36 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L03-C001</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>8.617228</td>
+      <td>9.079103</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 8.61723; predicted 168-hour value is 9.0791 ± 0.979418. The 24-hour value is 1.75 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C004</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.458401</td>
+      <td>5.136428</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 3.4584; predicted 168-hour value is 5.13643 ± 0.979418. The 0h to 24h slope is 2.45 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L03-C014</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>4.079133</td>
+      <td>4.924279</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.07913; predicted 168-hour value is 4.92428 ± 0.979418. The 24-hour value is 1.36 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C018</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.008982</td>
+      <td>11.397818</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.009; predicted 168-hour value is 11.3978 ± 0.979418. The 0h to 24h slope is 1.71 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L03-C026</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.061425</td>
+      <td>9.538942</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 9.06142; predicted 168-hour value is 9.53894 ± 0.979418. The 0h to 24h slope is 2.20 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C022</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>5.161759</td>
+      <td>6.118067</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 5.16176; predicted 168-hour value is 6.11807 ± 0.979418. The 24-hour value is 1.39 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L02-C005</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.425436</td>
+      <td>11.320041</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.4254; predicted 168-hour value is 11.32 ± 0.979418. The 0h to 24h slope is 2.91 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L05-C024</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.921670</td>
+      <td>12.102834</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 10.9217; predicted 168-hour value is 12.1028 ± 0.979418. The 24-hour value is 1.33 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L04-C024</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.152332</td>
+      <td>5.735412</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.15233; predicted 168-hour value is 5.73541 ± 0.979418. The 0h to 24h slope is 2.18 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L04-C028</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>10.333572</td>
+      <td>10.848592</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.3336; predicted 168-hour value is 10.8486 ± 0.979418. The 24-hour value is 0.89 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.39 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L01-C019</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.840966</td>
+      <td>11.462410</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.841; predicted 168-hour value is 11.4624 ± 0.979418. The 24-hour value is 0.78 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.53 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L01-C008</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.337326</td>
+      <td>10.873141</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.3373; predicted 168-hour value is 10.8731 ± 0.979418. The 0h to 24h slope is 2.42 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C019</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>5.217370</td>
+      <td>5.790264</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 5.21737; predicted 168-hour value is 5.79026 ± 0.979418. The 24-hour value is 1.57 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C018</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.593129</td>
+      <td>10.383884</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 9.59313; predicted 168-hour value is 10.3839 ± 0.979418. The 24-hour value is 1.34 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C014</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>9.550421</td>
+      <td>10.236752</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 9.55042; predicted 168-hour value is 10.2368 ± 0.979418. The 24-hour value is 1.53 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L02-C004</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.378404</td>
+      <td>11.998061</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.3784; predicted 168-hour value is 11.9981 ± 0.979418. The 0h to 24h slope is 2.22 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L05-C027</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.564047</td>
+      <td>5.907711</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.56405; predicted 168-hour value is 5.90771 ± 0.979418. The 0h to 24h slope is 1.61 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C028</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.202653</td>
+      <td>10.569873</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.2027; predicted 168-hour value is 10.5699 ± 0.979418. The 0h to 24h slope is 1.77 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L03-C006</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.199220</td>
+      <td>4.540425</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 3.19922; predicted 168-hour value is 4.54043 ± 0.979418. The 0h to 24h slope is 2.04 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L01-C011</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.255355</td>
+      <td>10.686764</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.2554; predicted 168-hour value is 10.6868 ± 0.979418. The 0h to 24h slope is 2.02 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L01-C028</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>11.020488</td>
+      <td>12.195331</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 11.0205; predicted 168-hour value is 12.1953 ± 0.979418. The 24-hour value is 1.11 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L04-C027</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.354283</td>
+      <td>5.339276</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.35428; predicted 168-hour value is 5.33928 ± 0.979418. The 24-hour value is 0.97 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.03 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L04-C026</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.172335</td>
+      <td>5.506671</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.17234; predicted 168-hour value is 5.50667 ± 0.979418. The 0h to 24h slope is 1.81 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L05-C010</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>9.611217</td>
+      <td>10.100783</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 9.61122; predicted 168-hour value is 10.1008 ± 0.979418. The 24-hour value is 1.59 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C007</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>8.753523</td>
+      <td>9.268077</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 8.75352; predicted 168-hour value is 9.26808 ± 0.979418. The 24-hour value is 1.32 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C008</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>2.589511</td>
+      <td>2.831953</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 2.58951; predicted 168-hour value is 2.83195 ± 0.979418. The 24-hour value is 1.39 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C013</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>2.811435</td>
+      <td>3.499271</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 2.81143; predicted 168-hour value is 3.49927 ± 0.979418. The 24-hour value is 0.98 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L02-C010</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.223255</td>
+      <td>10.566337</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.2233; predicted 168-hour value is 10.5663 ± 0.979418. The 0h to 24h slope is 1.66 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L01-C016</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>9.490498</td>
+      <td>10.052007</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 9.4905; predicted 168-hour value is 10.052 ± 0.979418. The 24-hour value is 1.64 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C012</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.618681</td>
+      <td>11.046432</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.6187; predicted 168-hour value is 11.0464 ± 0.979418. The 0h to 24h slope is 1.32 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L01-C011</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.592080</td>
+      <td>4.994888</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.59208; predicted 168-hour value is 4.99489 ± 0.979418. The 24-hour value is 0.89 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C023</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.200789</td>
+      <td>10.585084</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.2008; predicted 168-hour value is 10.5851 ± 0.979418. The 0h to 24h slope is 1.71 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L01-C002</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.013965</td>
+      <td>4.992644</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.01396; predicted 168-hour value is 4.99264 ± 0.979418. The 24-hour value is 0.87 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.00 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L01-C015</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.652784</td>
+      <td>12.094206</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.6528; predicted 168-hour value is 12.0942 ± 0.979418. The 0h to 24h slope is 1.57 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C025</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>5.120844</td>
+      <td>5.893440</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 5.12084; predicted 168-hour value is 5.89344 ± 0.979418. The 24-hour value is 1.25 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L02-C010</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>5.101705</td>
+      <td>5.547164</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 5.1017; predicted 168-hour value is 5.54716 ± 0.979418. The 24-hour value is 1.19 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C003</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>11.051686</td>
+      <td>12.121338</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 11.0517; predicted 168-hour value is 12.1213 ± 0.979418. The 24-hour value is 1.16 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L04-C022</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>10.411812</td>
+      <td>11.460933</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 10.4118; predicted 168-hour value is 11.4609 ± 0.979418. The 24-hour value is 1.02 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C007</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.798555</td>
+      <td>11.847517</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 10.7986; predicted 168-hour value is 11.8475 ± 0.979418. The 24-hour value is 1.06 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C024</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>8.821770</td>
+      <td>9.384391</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 8.82177; predicted 168-hour value is 9.38439 ± 0.979418. The 24-hour value is 1.11 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C007</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>2.647445</td>
+      <td>2.886459</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 2.64744; predicted 168-hour value is 2.88646 ± 0.979418. The 24-hour value is 1.28 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C025</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.976844</td>
+      <td>4.463363</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 3.97684; predicted 168-hour value is 4.46336 ± 0.979418. The 24-hour value is 1.17 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C008</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.599491</td>
+      <td>5.609193</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.59949; predicted 168-hour value is 5.60919 ± 0.979418. The 24-hour value is 0.91 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L02-C021</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.271158</td>
+      <td>4.596645</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.27116; predicted 168-hour value is 4.59664 ± 0.979418. The 24-hour value is 1.53 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C021</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>8.877900</td>
+      <td>9.521911</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 8.8779; predicted 168-hour value is 9.52191 ± 0.979418. The 24-hour value is 0.93 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C017</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>3.969738</td>
+      <td>4.222803</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 3.96974; predicted 168-hour value is 4.2228 ± 0.979418. The 24-hour value is 1.01 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C013</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.449119</td>
+      <td>6.032316</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.44912; predicted 168-hour value is 6.03232 ± 0.979418. The 0h to 24h slope is 1.95 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C006</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.908059</td>
+      <td>11.320837</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH", "EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.9081; predicted 168-hour value is 11.3208 ± 0.979418. The 24-hour value is 0.77 robust deviations from its lot/device/parameter peer median. The 0h to 24h slope is 1.02 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L04-C010</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>9.443666</td>
+      <td>9.707288</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 9.44367; predicted 168-hour value is 9.70729 ± 0.979418. The 0h to 24h slope is 1.24 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L04-C001</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>3.598744</td>
+      <td>3.984725</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 3.59874; predicted 168-hour value is 3.98473 ± 0.979418. The 24-hour value is 1.49 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C021</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.819151</td>
+      <td>4.553757</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 3.81915; predicted 168-hour value is 4.55376 ± 0.979418. The 24-hour value is 0.88 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C007</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.206723</td>
+      <td>4.841746</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.20672; predicted 168-hour value is 4.84175 ± 0.979418. The 24-hour value is 0.98 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C006</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.726169</td>
+      <td>5.376887</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.72617; predicted 168-hour value is 5.37689 ± 0.979418. The 24-hour value is 1.30 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L02-C022</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>11.153740</td>
+      <td>11.828256</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 11.1537; predicted 168-hour value is 11.8283 ± 0.979418. The 24-hour value is 1.20 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L02-C023</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>11.032571</td>
+      <td>11.469505</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 11.0326; predicted 168-hour value is 11.4695 ± 0.979418. The 24-hour value is 0.99 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L02-C027</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.178929</td>
+      <td>10.450645</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.1789; predicted 168-hour value is 10.4506 ± 0.979418. The 0h to 24h slope is 1.31 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L05-C028</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.601309</td>
+      <td>10.979438</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.6013; predicted 168-hour value is 10.9794 ± 0.979418. The 0h to 24h slope is 1.16 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L01-C013</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>3.944046</td>
+      <td>4.228790</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 3.94405; predicted 168-hour value is 4.22879 ± 0.979418. The 24-hour value is 1.09 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L04-C014</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>3.699987</td>
+      <td>3.998035</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 3.69999; predicted 168-hour value is 3.99804 ± 0.979418. The 24-hour value is 1.16 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C012</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.644030</td>
+      <td>5.176032</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.64403; predicted 168-hour value is 5.17603 ± 0.979418. The 24-hour value is 1.05 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C012</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.600357</td>
+      <td>4.992214</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.60036; predicted 168-hour value is 4.99221 ± 0.979418. The 24-hour value is 0.75 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L02-C020</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.986738</td>
+      <td>5.913483</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.98674; predicted 168-hour value is 5.91348 ± 0.979418. The 24-hour value is 0.82 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C026</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>9.818103</td>
+      <td>10.551993</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 9.8181; predicted 168-hour value is 10.552 ± 0.979418. The 24-hour value is 1.05 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C014</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.309094</td>
+      <td>6.111580</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.30909; predicted 168-hour value is 6.11158 ± 0.979418. The 0h to 24h slope is 1.91 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L03-C004</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.595828</td>
+      <td>10.212006</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 9.59583; predicted 168-hour value is 10.212 ± 0.979418. The 24-hour value is 1.35 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C022</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.228133</td>
+      <td>5.736541</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.22813; predicted 168-hour value is 5.73654 ± 0.979418. The 0h to 24h slope is 1.64 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C011</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.333780</td>
+      <td>4.615347</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.33378; predicted 168-hour value is 4.61535 ± 0.979418. The 24-hour value is 1.32 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C019</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.092471</td>
+      <td>4.320183</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.09247; predicted 168-hour value is 4.32018 ± 0.979418. The 0h to 24h slope is 1.06 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C004</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.801222</td>
+      <td>6.261101</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.80122; predicted 168-hour value is 6.2611 ± 0.979418. The 0h to 24h slope is 1.62 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L01-C026</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.629076</td>
+      <td>5.497333</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.62908; predicted 168-hour value is 5.49733 ± 0.979418. The 24-hour value is 1.00 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L04-C015</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>8.990702</td>
+      <td>9.412782</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 8.9907; predicted 168-hour value is 9.41278 ± 0.979418. The 24-hour value is 1.36 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L04-C026</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>10.158067</td>
+      <td>11.309019</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.1581; predicted 168-hour value is 11.309 ± 0.979418. The 0h to 24h slope is 1.04 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L03-C003</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.755002</td>
+      <td>4.130418</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 3.755; predicted 168-hour value is 4.13042 ± 0.979418. The 24-hour value is 0.76 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C012</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.408040</td>
+      <td>3.765237</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 3.40804; predicted 168-hour value is 3.76524 ± 0.979418. The 0h to 24h slope is 1.66 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L03-C001</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>2.616838</td>
+      <td>2.932722</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 2.61684; predicted 168-hour value is 2.93272 ± 0.979418. The 24-hour value is 1.33 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C004</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.591875</td>
+      <td>5.426434</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.59187; predicted 168-hour value is 5.42643 ± 0.979418. The 24-hour value is 0.89 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L04-C023</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>3.800778</td>
+      <td>4.069181</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 3.80078; predicted 168-hour value is 4.06918 ± 0.979418. The 24-hour value is 0.83 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C003</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>9.864572</td>
+      <td>10.130946</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 9.86457; predicted 168-hour value is 10.1309 ± 0.979418. The 24-hour value is 1.02 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L02-C003</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.617666</td>
+      <td>11.688036</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.6177; predicted 168-hour value is 11.688 ± 0.979418. The 0h to 24h slope is 1.46 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L05-C006</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.629323</td>
+      <td>11.021115</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 10.6293; predicted 168-hour value is 11.0211 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C018</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.454310</td>
+      <td>5.114177</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.45431; predicted 168-hour value is 5.11418 ± 0.979418. The 24-hour value is 1.30 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L04-C006</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>9.332928</td>
+      <td>9.591489</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 9.33293; predicted 168-hour value is 9.59149 ± 0.979418. The 24-hour value is 0.79 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C009</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.866680</td>
+      <td>11.553858</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 10.8667; predicted 168-hour value is 11.5539 ± 0.979418. The 24-hour value is 1.21 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L02-C005</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.867751</td>
+      <td>5.945704</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.86775; predicted 168-hour value is 5.9457 ± 0.979418. The 0h to 24h slope is 1.13 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L04-C021</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>9.361698</td>
+      <td>10.123351</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 9.3617; predicted 168-hour value is 10.1234 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C001</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>9.514350</td>
+      <td>10.525017</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 9.51435; predicted 168-hour value is 10.525 ± 0.979418. The 0h to 24h slope is 1.04 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L03-C005</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.852285</td>
+      <td>4.457676</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 3.85229; predicted 168-hour value is 4.45768 ± 0.979418. The 24-hour value is 0.94 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L04-C008</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>3.694255</td>
+      <td>4.066703</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 3.69426; predicted 168-hour value is 4.0667 ± 0.979418. The 24-hour value is 1.18 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L04-C012</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>3.882249</td>
+      <td>4.604984</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 3.88225; predicted 168-hour value is 4.60498 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C005</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>9.871927</td>
+      <td>10.329423</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 9.87193; predicted 168-hour value is 10.3294 ± 0.979418. The 24-hour value is 0.95 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C015</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>8.981683</td>
+      <td>9.643202</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 8.98168; predicted 168-hour value is 9.6432 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C015</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>9.857124</td>
+      <td>10.162574</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 9.85712; predicted 168-hour value is 10.1626 ± 0.979418. The 24-hour value is 1.08 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C009</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.987984</td>
+      <td>4.570950</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 3.98798; predicted 168-hour value is 4.57095 ± 0.979418. The 24-hour value is 1.19 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C003</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.506548</td>
+      <td>5.396811</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 4.50655; predicted 168-hour value is 5.39681 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C017</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.286554</td>
+      <td>5.038562</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.28655; predicted 168-hour value is 5.03856 ± 0.979418. The 24-hour value is 0.75 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L04-C017</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>9.308968</td>
+      <td>9.941419</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 9.30897; predicted 168-hour value is 9.94142 ± 0.979418. The 24-hour value is 0.83 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C008</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.023797</td>
+      <td>10.885985</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 10.0238; predicted 168-hour value is 10.886 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C026</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.554984</td>
+      <td>4.327542</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 3.55498; predicted 168-hour value is 4.32754 ± 0.979418. The 0h to 24h slope is 1.05 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L03-C006</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>8.933965</td>
+      <td>9.467248</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 8.93397; predicted 168-hour value is 9.46725 ± 0.979418. The 24-hour value is 0.75 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C027</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.469560</td>
+      <td>10.892197</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 10.4696; predicted 168-hour value is 10.8922 ± 0.979418. The 0h to 24h slope is 1.39 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C019</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.099578</td>
+      <td>10.666048</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 10.0996; predicted 168-hour value is 10.666 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C007</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>3.856201</td>
+      <td>4.469170</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 3.8562; predicted 168-hour value is 4.46917 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C022</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>2.971870</td>
+      <td>3.196632</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 2.97187; predicted 168-hour value is 3.19663 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C008</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.007175</td>
+      <td>10.474433</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 10.0072; predicted 168-hour value is 10.4744 ± 0.979418. The 24-hour value is 0.81 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C020</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>9.856545</td>
+      <td>10.229713</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 9.85655; predicted 168-hour value is 10.2297 ± 0.979418. The 24-hour value is 1.04 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C024</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.039819</td>
+      <td>4.335746</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.03982; predicted 168-hour value is 4.33575 ± 0.979418. The 24-hour value is 0.79 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L03-C002</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.863657</td>
+      <td>4.359294</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 3.86366; predicted 168-hour value is 4.35929 ± 0.979418. The 24-hour value is 0.96 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L04-C018</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>10.159380</td>
+      <td>11.087925</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 10.1594; predicted 168-hour value is 11.0879 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C023</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.050275</td>
+      <td>10.286964</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 10.0503; predicted 168-hour value is 10.287 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C024</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>10.452077</td>
+      <td>11.159483</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 10.4521; predicted 168-hour value is 11.1595 ± 0.979418. The 24-hour value is 1.09 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C010</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.344255</td>
+      <td>4.573931</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 4.34426; predicted 168-hour value is 4.57393 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C007</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.535176</td>
+      <td>5.286356</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 4.53518; predicted 168-hour value is 5.28636 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C005</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.218152</td>
+      <td>4.991356</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 4.21815; predicted 168-hour value is 4.99136 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C022</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.221506</td>
+      <td>10.157832</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 9.22151; predicted 168-hour value is 10.1578 ± 0.979418. The 0h to 24h slope is 1.22 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L02-C012</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>9.961000</td>
+      <td>10.366151</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 9.961; predicted 168-hour value is 10.3662 ± 0.979418. The 24-hour value is 0.89 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L01-C015</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.601245</td>
+      <td>5.167504</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 4.60124; predicted 168-hour value is 5.1675 ± 0.979418. The 24-hour value is 0.92 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C004</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>9.984183</td>
+      <td>10.618678</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 9.98418; predicted 168-hour value is 10.6187 ± 0.979418. The 24-hour value is 0.76 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L05-C018</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.133920</td>
+      <td>10.373309</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 10.1339; predicted 168-hour value is 10.3733 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C028</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.340753</td>
+      <td>9.761038</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 9.34075; predicted 168-hour value is 9.76104 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C005</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>10.116751</td>
+      <td>10.527334</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 10.1168; predicted 168-hour value is 10.5273 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C009</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.833436</td>
+      <td>11.531902</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 10.8334; predicted 168-hour value is 11.5319 ± 0.979418. The 24-hour value is 0.77 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L04-C016</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.041113</td>
+      <td>4.335985</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.04111; predicted 168-hour value is 4.33599 ± 0.979418. The 0h to 24h slope is 1.31 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L05-C020</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.410732</td>
+      <td>4.680369</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.41073; predicted 168-hour value is 4.68037 ± 0.979418. The 0h to 24h slope is 1.26 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L01-C001</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.623714</td>
+      <td>11.617925</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 10.6237; predicted 168-hour value is 11.6179 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C027</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.173001</td>
+      <td>4.414601</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 4.173; predicted 168-hour value is 4.4146 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C013</td>
+      <td>LOT-02</td>
+      <td>LeakageCurrent</td>
+      <td>4.621972</td>
+      <td>5.377445</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 4.62197; predicted 168-hour value is 5.37744 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C013</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>4.058452</td>
+      <td>4.382497</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.05845; predicted 168-hour value is 4.3825 ± 0.979418. The 0h to 24h slope is 1.34 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L04-C002</td>
+      <td>LOT-04</td>
+      <td>Iddq</td>
+      <td>9.772406</td>
+      <td>10.082115</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 9.77241; predicted 168-hour value is 10.0821 ± 0.979418. The 0h to 24h slope is 1.27 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L01-C005</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.248573</td>
+      <td>4.504174</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.24857; predicted 168-hour value is 4.50417 ± 0.979418. The 0h to 24h slope is 1.12 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L05-C014</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.041245</td>
+      <td>10.744364</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 10.0412; predicted 168-hour value is 10.7444 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L02-C014</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.868714</td>
+      <td>11.466348</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 10.8687; predicted 168-hour value is 11.4663 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L04-C022</td>
+      <td>LOT-04</td>
+      <td>LeakageCurrent</td>
+      <td>3.763155</td>
+      <td>4.154441</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["PEER_DEVIATION_HIGH"]</td>
+      <td>REVIEW: 24-hour value is 3.76315; predicted 168-hour value is 4.15444 ± 0.979418. The 24-hour value is 0.96 robust deviations from its lot/device/parameter peer median.</td>
+    </tr>
+    <tr>
+      <td>L02-C025</td>
+      <td>LOT-02</td>
+      <td>Iddq</td>
+      <td>10.823891</td>
+      <td>11.197834</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 10.8239; predicted 168-hour value is 11.1978 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C027</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.245955</td>
+      <td>9.598489</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 9.24596; predicted 168-hour value is 9.59849 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C012</td>
+      <td>LOT-03</td>
+      <td>Iddq</td>
+      <td>9.110390</td>
+      <td>9.386731</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 9.11039; predicted 168-hour value is 9.38673 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C002</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.153301</td>
+      <td>11.032030</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 10.1533; predicted 168-hour value is 11.032 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C012</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.770243</td>
+      <td>11.603873</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 10.7702; predicted 168-hour value is 11.6039 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C002</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.629881</td>
+      <td>11.182386</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 10.6299; predicted 168-hour value is 11.1824 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C025</td>
+      <td>LOT-05</td>
+      <td>Iddq</td>
+      <td>10.434549</td>
+      <td>10.749061</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 10.4345; predicted 168-hour value is 10.7491 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L03-C010</td>
+      <td>LOT-03</td>
+      <td>LeakageCurrent</td>
+      <td>3.076448</td>
+      <td>3.313351</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 3.07645; predicted 168-hour value is 3.31335 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L05-C011</td>
+      <td>LOT-05</td>
+      <td>LeakageCurrent</td>
+      <td>4.536249</td>
+      <td>4.916549</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 4.53625; predicted 168-hour value is 4.91655 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C018</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.166009</td>
+      <td>4.434633</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 4.16601; predicted 168-hour value is 4.43463 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+    <tr>
+      <td>L01-C023</td>
+      <td>LOT-01</td>
+      <td>LeakageCurrent</td>
+      <td>4.291325</td>
+      <td>5.335012</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["EARLY_DRIFT_ABOVE_PEER_SLOPE"]</td>
+      <td>REVIEW: 24-hour value is 4.29132; predicted 168-hour value is 5.33501 ± 0.979418. The 0h to 24h slope is 1.09 robust deviations from the peer slope median.</td>
+    </tr>
+    <tr>
+      <td>L01-C022</td>
+      <td>LOT-01</td>
+      <td>Iddq</td>
+      <td>10.235342</td>
+      <td>11.069734</td>
+      <td>0.979418</td>
+      <td>REVIEW</td>
+      <td>["WITHIN_CONFIGURED_RISK_POLICY"]</td>
+      <td>REVIEW: 24-hour value is 10.2353; predicted 168-hour value is 11.0697 ± 0.979418. The early measurements, peer-relative values, forecast, and uncertainty interval are within the configured policy.</td>
+    </tr>
+  </tbody>
+</table></body></html>

@@ -1,0 +1,43 @@
+decision_policy_version: "dec_v1"
+description: "Operational disposition policy and multi-source risk fusion rules"
+
+thresholds:
+  anomaly_score:
+    watch_threshold: 0.55
+    review_threshold: 0.65
+    reject_threshold: 0.85
+  forecast_risk:
+    max_acceptable_drift_rate: 0.15
+    uncertainty_upper_factor: 2.0  # 2-sigma boundary
+  engineering_limits:
+    # Plausible normalized standard deviations beyond peer mean
+    max_peer_zscore: 4.5
+
+rules:
+  REJECT:
+    conditions:
+      - "Gross out-of-specification violation verified by trusted measurement"
+      - "Anomaly score exceeds reject_threshold (>= 0.85) and forecast projects critical threshold crossing with high confidence"
+    action: "Reject component from flight/screening lot; preserve audit evidence"
+
+  RETEST:
+    conditions:
+      - "Data quality status is QUARANTINE or critical validation check failed"
+      - "Suspicion of sensor error, contact bounce, clock mismatch, or unresolvable unit ambiguity"
+    action: "Order re-test of component; do not condemn hardware on untrusted data"
+
+  REVIEW:
+    conditions:
+      - "Anomaly score is between review_threshold and reject_threshold (0.65 <= score < 0.85)"
+      - "Forecast trend projects limit crossing but predictive uncertainty is wide"
+      - "Strong common-mode signal detected across peer population (potential chamber/instrument disturbance)"
+      - "In-spec but anomalous peer-relative deviation (> 3.0 sigma)"
+    action: "Route to Human QA / Engineering disposition with evidence pack"
+
+  PASS:
+    conditions:
+      - "Data quality verified as trusted"
+      - "Anomaly score is below review_threshold (< 0.65)"
+      - "Forecast trajectory remains stable within nominal bounds"
+      - "All engineering rules satisfied"
+    action: "Nominal screening outcome; component approved for next screening stage"

@@ -1,0 +1,11 @@
+dataset_id: D2
+intended_tasks:
+- anomaly
+notes: ''
+received_at: '2026-09-16T07:14:03.909660+00:00'
+sha256: bf07e08f2cc3c263fa983b286efa9d9828396cfd2040e6d69313200b054575fa
+source_name: D2
+source_path: data/D2.csv
+source_type: csv
+source_version: sha256:bf07e08f2cc3
+status: registered

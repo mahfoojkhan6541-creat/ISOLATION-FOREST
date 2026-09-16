@@ -1,0 +1,25 @@
+unit_policy_version: "units_v1"
+description: "Canonical unit and conversion rules for burn-in measurements"
+
+units:
+  arb_norm:
+    description: "Arbitrary normalized measurement unit from screening process"
+    canonical_unit: "arb_norm"
+    conversions:
+      identity:
+        factor: 1.0
+        offset: 0.0
+    validation:
+      plausible_min: -1000.0
+      plausible_max: 1000.0
+
+  duration_ms:
+    description: "Normalized or raw test duration in milliseconds"
+    canonical_unit: "ms_norm"
+    conversions:
+      identity:
+        factor: 1.0
+        offset: 0.0
+    validation:
+      plausible_min: -100.0
+      plausible_max: 100000.0

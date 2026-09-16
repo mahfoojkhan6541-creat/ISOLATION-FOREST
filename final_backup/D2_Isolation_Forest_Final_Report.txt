@@ -1,0 +1,74 @@
+======================================================================
+SIH26170 - ISOLATION FOREST FINAL REPORT
+======================================================================
+
+1. DATASET
+----------------------------------------------------------------------
+Dataset: D2
+
+2. MODEL
+----------------------------------------------------------------------
+Method: Isolation Forest
+Feature representation: V2 enhanced without acceleration
+Number of estimators: 200
+Random state: 42
+Candidate contamination: 0.01
+Score definition: -IsolationForest.score_samples(X)
+
+3. FEATURES
+----------------------------------------------------------------------
+Original feature count: 175
+Removed feature family: acceleration
+Removed feature count: 19
+Final model feature count: 156
+
+4. DECISION CONFIGURATION
+----------------------------------------------------------------------
+Decision level: MaterialID
+Score aggregation: mean_score
+Validation threshold: 0.393578
+Threshold selection split: validation
+Threshold frozen: True
+
+5. VALIDATION PERFORMANCE
+----------------------------------------------------------------------
+Average Precision: 0.834371
+Precision: 0.753846
+Recall: 0.924528
+F1: 0.830508
+FPR: 0.133333
+FNR: 0.075472
+
+6. FINAL TEST PERFORMANCE
+----------------------------------------------------------------------
+Accuracy: 89.08%
+Precision: 75.00%
+Recall: 96.23%
+F1: 84.30%
+FPR: 14.05%
+FNR: 3.77%
+
+7. CONFUSION MATRIX
+----------------------------------------------------------------------
+TN: 104
+FP: 17
+FN: 2
+TP: 51
+Total MaterialIDs: 174
+
+8. FINAL PREDICTIONS
+----------------------------------------------------------------------
+NORMAL: 106
+ABNORMAL: 68
+Total: 174
+
+9. LEAKAGE CHECK
+----------------------------------------------------------------------
+Final test used for threshold selection: False
+Threshold source: validation
+Final-test labels used for model training: No
+Final-test labels used for threshold selection: No
+
+======================================================================
+FINAL REPORT COMPLETE
+======================================================================

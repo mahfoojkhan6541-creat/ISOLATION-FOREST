@@ -1,0 +1,159 @@
+Created At: 2026-09-16T13:36:17+05:30
+Completed At: 2026-09-16T13:36:17+05:30
+File Path: `file:///d:/WhiteBox/SIH2026_IF/dashboard/index.html`
+Total Lines: 986
+Total Bytes: 34143
+Showing lines 450 to 600
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+450:     .reason-box h4 {
+451:       font-size: 13px;
+452:       font-weight: 600;
+453:       margin-bottom: 8px;
+454:       color: var(--text-primary);
+455:     }
+456: 
+457:     .reason-box p {
+458:       font-size: 12.5px;
+459:       color: var(--text-secondary);
+460:       line-height: 1.6;
+461:     }
+462: 
+463:     .hypotheses-box {
+464:       background: rgba(99, 102, 241, 0.05);
+465:       border: 1px solid rgba(99, 102, 241, 0.2);
+466:       border-radius: var(--radius-md);
+467:       padding: 12px;
+468:       font-size: 12px;
+469:     }
+470: 
+471:     .hypotheses-title {
+472:       font-weight: 600;
+473:       color: #a5b4fc;
+474:       margin-bottom: 4px;
+475:       display: flex;
+476:       align-items: center;
+477:       gap: 6px;
+478:     }
+479: 
+480:     /* Human QA Sign-Off Form (Section 38.2) */
+481:     .qa-signoff-card {
+482:       background: rgba(255, 255, 255, 0.02);
+483:       border: 1px solid var(--border-color);
+484:       border-radius: var(--radius-md);
+485:       padding: 16px;
+486:       margin-top: auto;
+487:     }
+488: 
+489:     .qa-signoff-card h4 {
+490:       font-size: 13px;
+491:       font-weight: 600;
+492:       color: #fff;
+493:       margin-bottom: 12px;
+494:       display: flex;
+495:       align-items: center;
+496:       gap: 6px;
+497:     }
+498: 
+499:     .form-group {
+500:       margin-bottom: 10px;
+501:     }
+502: 
+503:     .form-group label {
+504:       display: block;
+505:       font-size: 11px;
+506:       color: var(--text-secondary);
+507:       margin-bottom: 4px;
+508:     }
+509: 
+510:     .form-control {
+511:       width: 100%;
+512:       background: rgba(0, 0, 0, 0.2);
+513:       border: 1px solid var(--border-color);
+514:       border-radius: var(--radius-sm);
+515:       padding: 6px 10px;
+516:       color: #fff;
+517:       font-size: 12px;
+518:       outline: none;
+519:     }
+520: 
+521:     .form-control:focus {
+522:       border-color: var(--accent-primary);
+523:     }
+524: 
+525:     .btn-submit {
+526:       width: 100%;
+527:       background: linear-gradient(135deg, #4f46e5, #7c3aed);
+528:       color: #fff;
+529:       font-weight: 600;
+530:       font-size: 12px;
+531:       border: none;
+532:       border-radius: var(--radius-sm);
+533:       padding: 9px 12px;
+534:       cursor: pointer;
+535:       transition: opacity 0.2s ease;
+536:       margin-top: 4px;
+537:     }
+538: 
+539:     .btn-submit:hover {
+540:       opacity: 0.9;
+541:     }
+542: 
+543:     /* Scrollbar */
+544:     ::-webkit-scrollbar {
+545:       width: 6px;
+546:       height: 6px;
+547:     }
+548:     ::-webkit-scrollbar-track {
+549:       background: rgba(0, 0, 0, 0.1);
+550:     }
+551:     ::-webkit-scrollbar-thumb {
+552:       background: rgba(255, 255, 255, 0.15);
+553:       border-radius: 3px;
+554:     }
+555:   </style>
+556: </head>
+557: <body>
+558: 
+559:   <!-- Top Bar -->
+560:   <header>
+561:     <div class="brand-group">
+562:       <div class="logo-badge">SIH26170</div>
+563:       <div>
+564:         <div class="brand-title">Burn-In Screening & Trajectory Anomaly Platform</div>
+565:         <div class="brand-subtitle">Generalized Time-Aware Data Pipeline &bull; Human-Supervised Decision Architecture</div>
+566:       </div>
+567:     </div>
+568: 
+569:     <div class="header-controls">
+570:       <label for="datasetSelect" style="font-size: 12px; color: var(--text-secondary);">Screening Dataset:</label>
+571:       <select id="datasetSelect" class="dataset-select" onchange="switchDataset(this.value)">
+572:         <option value="D1" selected>Authentic Dataset D1 (7 Checkpoints &bull; GPR Forecasting & IF)</option>
+573:         <option value="D2">Authentic Dataset D2 (2 Checkpoints &bull; IF & Population Gating)</option>
+574:       </select>
+575: 
+576:       <div class="status-indicator">
+577:         <div class="status-dot"></div>
+578:         <span>SQLite Traceability: ACTIVE</span>
+579:       </div>
+580:     </div>
+581:   </header>
+582: 
+583:   <!-- Main Body -->
+584:   <main>
+585:     <!-- Row 1: Executive KPI Metrics -->
+586:     <div class="metrics-row">
+587:       <div class="metric-card">
+588:         <div class="metric-label">Screened Components</div>
+589:         <div class="metric-value" id="kpiTotalScreened">300 <span class="metric-sub">/ 5,104 units</span></div>
+590:       </div>
+591: 
+592:       <div class="metric-card">
+593:         <div class="metric-label">Operational Dispositions</div>
+594:         <div class="metric-value">
+595:           <span style="color: var(--pass-color); font-size: 20px;" id="kpiPassCount">287 PASS</span>
+596:           <span style="color: var(--review-color); font-size: 15px; margin-left: 6px;" id="kpiReviewCount">3 REV</span>
+597:           <span style="color: var(--reject-color); font-size: 15px; margin-left: 6px;" id="kpiRejectCount">10 REJ</span>
+598:         </div>
+599:       </div>
+600: 
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

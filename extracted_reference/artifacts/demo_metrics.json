@@ -1,0 +1,17 @@
+{
+  "action_counts": {
+    "PASS": 71,
+    "REJECT": 10,
+    "REVIEW": 199
+  },
+  "bias": 1.6526462737991616e-14,
+  "early_decision_contract": "Only 0h and 24h values are used by the forecasting and screening decision path.",
+  "false_negative_count": 2,
+  "false_negative_rate": 0.05,
+  "interval_coverage_90": 0.9,
+  "mae": 0.43249125376930087,
+  "precision": 0.18181818181818182,
+  "recall": 0.95,
+  "rmse": 0.601789259402296,
+  "screened_series": 280
+}

@@ -1,0 +1,158 @@
+Created At: 2026-09-16T13:35:01+05:30
+Completed At: 2026-09-16T13:35:01+05:30
+File Path: `file:///d:/WhiteBox/SIH2026_IF/dashboard/index.html`
+Total Lines: 986
+Total Bytes: 34143
+Showing lines 1 to 150
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: <!DOCTYPE html>
+2: <html lang="en">
+3: <head>
+4:   <meta charset="UTF-8">
+5:   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+6:   <title>SIH26170 Generalized Burn-In Screening & Anomaly Intelligence</title>
+7:   <link rel="preconnect" href="https://fonts.googleapis.com">
+8:   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+9:   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+10:   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+11:   <style>
+12:     :root {
+13:       --bg-primary: #0a0e17;
+14:       --bg-secondary: #111827;
+15:       --bg-card: rgba(17, 24, 39, 0.75);
+16:       --bg-card-hover: rgba(31, 41, 55, 0.85);
+17:       --border-color: rgba(255, 255, 255, 0.08);
+18:       --border-focus: rgba(99, 102, 241, 0.5);
+19:       --text-primary: #f9fafb;
+20:       --text-secondary: #9ca3af;
+21:       --text-muted: #6b7280;
+22:       --accent-primary: #6366f1;
+23:       --accent-glow: rgba(99, 102, 241, 0.25);
+24:       --pass-color: #10b981;
+25:       --pass-bg: rgba(16, 185, 129, 0.15);
+26:       --retest-color: #06b6d4;
+27:       --retest-bg: rgba(6, 182, 212, 0.15);
+28:       --review-color: #f59e0b;
+29:       --review-bg: rgba(245, 158, 11, 0.15);
+30:       --reject-color: #ef4444;
+31:       --reject-bg: rgba(239, 68, 68, 0.15);
+32:       --radius-sm: 6px;
+33:       --radius-md: 10px;
+34:       --radius-lg: 16px;
+35:       --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+36:       --font-mono: 'JetBrains Mono', monospace;
+37:     }
+38: 
+39:     * {
+40:       box-sizing: border-box;
+41:       margin: 0;
+42:       padding: 0;
+43:     }
+44: 
+45:     body {
+46:       background: radial-gradient(circle at 50% 0%, #171e33 0%, var(--bg-primary) 70%);
+47:       color: var(--text-primary);
+48:       font-family: var(--font-sans);
+49:       min-height: 100vh;
+50:       display: flex;
+51:       flex-direction: column;
+52:       line-height: 1.5;
+53:       overflow-x: hidden;
+54:     }
+55: 
+56:     /* Top Navigation Bar */
+57:     header {
+58:       background: rgba(10, 14, 23, 0.85);
+59:       backdrop-filter: blur(12px);
+60:       border-bottom: 1px solid var(--border-color);
+61:       position: sticky;
+62:       top: 0;
+63:       z-index: 100;
+64:       padding: 12px 28px;
+65:       display: flex;
+66:       align-items: center;
+67:       justify-content: space-between;
+68:     }
+69: 
+70:     .brand-group {
+71:       display: flex;
+72:       align-items: center;
+73:       gap: 12px;
+74:     }
+75: 
+76:     .logo-badge {
+77:       background: linear-gradient(135deg, #6366f1, #a855f7);
+78:       color: #fff;
+79:       font-weight: 800;
+80:       font-size: 13px;
+81:       padding: 6px 10px;
+82:       border-radius: var(--radius-sm);
+83:       letter-spacing: 0.5px;
+84:       box-shadow: 0 0 15px var(--accent-glow);
+85:     }
+86: 
+87:     .brand-title {
+88:       font-size: 16px;
+89:       font-weight: 700;
+90:       color: #fff;
+91:     }
+92: 
+93:     .brand-subtitle {
+94:       font-size: 12px;
+95:       color: var(--text-secondary);
+96:     }
+97: 
+98:     .header-controls {
+99:       display: flex;
+100:       align-items: center;
+101:       gap: 16px;
+102:     }
+103: 
+104:     .dataset-select {
+105:       background: var(--bg-secondary);
+106:       color: var(--text-primary);
+107:       border: 1px solid var(--border-color);
+108:       border-radius: var(--radius-sm);
+109:       padding: 6px 14px;
+110:       font-size: 13px;
+111:       font-weight: 500;
+112:       cursor: pointer;
+113:       outline: none;
+114:     }
+115: 
+116:     .status-indicator {
+117:       display: flex;
+118:       align-items: center;
+119:       gap: 8px;
+120:       font-size: 12px;
+121:       font-family: var(--font-mono);
+122:       background: rgba(255, 255, 255, 0.04);
+123:       padding: 5px 12px;
+124:       border-radius: 20px;
+125:       border: 1px solid var(--border-color);
+126:     }
+127: 
+128:     .status-dot {
+129:       width: 8px;
+130:       height: 8px;
+131:       border-radius: 50%;
+132:       background: var(--pass-color);
+133:       box-shadow: 0 0 8px var(--pass-color);
+134:     }
+135: 
+136:     /* Main Container */
+137:     main {
+138:       flex: 1;
+139:       padding: 24px 28px;
+140:       max-width: 1680px;
+141:       width: 100%;
+142:       margin: 0 auto;
+143:       display: flex;
+144:       flex-direction: column;
+145:       gap: 24px;
+146:     }
+147: 
+148:     /* Metrics Overview Grid */
+149:     .metrics-row {
+150:       display: grid;
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

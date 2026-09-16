@@ -1,0 +1,164 @@
+Created At: 2026-09-16T13:36:15+05:30
+Completed At: 2026-09-16T13:36:15+05:30
+File Path: `file:///d:/WhiteBox/SIH2026_IF/dashboard/index.html`
+Total Lines: 986
+Total Bytes: 34143
+Showing lines 145 to 300
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+145:       gap: 24px;
+146:     }
+147: 
+148:     /* Metrics Overview Grid */
+149:     .metrics-row {
+150:       display: grid;
+151:       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+152:       gap: 16px;
+153:     }
+154: 
+155:     .metric-card {
+156:       background: var(--bg-card);
+157:       backdrop-filter: blur(10px);
+158:       border: 1px solid var(--border-color);
+159:       border-radius: var(--radius-md);
+160:       padding: 18px 20px;
+161:       transition: transform 0.2s ease, border-color 0.2s ease;
+162:     }
+163: 
+164:     .metric-card:hover {
+165:       transform: translateY(-2px);
+166:       border-color: rgba(255, 255, 255, 0.15);
+167:     }
+168: 
+169:     .metric-label {
+170:       font-size: 12px;
+171:       text-transform: uppercase;
+172:       letter-spacing: 0.5px;
+173:       color: var(--text-secondary);
+174:       margin-bottom: 6px;
+175:     }
+176: 
+177:     .metric-value {
+178:       font-size: 26px;
+179:       font-weight: 700;
+180:       color: var(--text-primary);
+181:       display: flex;
+182:       align-items: baseline;
+183:       gap: 8px;
+184:     }
+185: 
+186:     .metric-sub {
+187:       font-size: 12px;
+188:       font-weight: 400;
+189:       color: var(--text-muted);
+190:     }
+191: 
+192:     /* Primary Workspace Split */
+193:     .workspace-split {
+194:       display: grid;
+195:       grid-template-columns: 320px 1fr 380px;
+196:       gap: 20px;
+197:       align-items: start;
+198:     }
+199: 
+200:     /* Sidebar: Component Explorer */
+201:     .sidebar-panel {
+202:       background: var(--bg-card);
+203:       backdrop-filter: blur(10px);
+204:       border: 1px solid var(--border-color);
+205:       border-radius: var(--radius-lg);
+206:       padding: 16px;
+207:       height: 820px;
+208:       display: flex;
+209:       flex-direction: column;
+210:       gap: 12px;
+211:     }
+212: 
+213:     .panel-header {
+214:       font-size: 14px;
+215:       font-weight: 600;
+216:       display: flex;
+217:       align-items: center;
+218:       justify-content: space-between;
+219:       padding-bottom: 8px;
+220:       border-bottom: 1px solid var(--border-color);
+221:     }
+222: 
+223:     .search-input {
+224:       width: 100%;
+225:       background: rgba(255, 255, 255, 0.04);
+226:       border: 1px solid var(--border-color);
+227:       border-radius: var(--radius-sm);
+228:       padding: 8px 12px;
+229:       color: #fff;
+230:       font-size: 13px;
+231:       outline: none;
+232:     }
+233: 
+234:     .search-input:focus {
+235:       border-color: var(--accent-primary);
+236:     }
+237: 
+238:     .filter-pills {
+239:       display: flex;
+240:       gap: 6px;
+241:       overflow-x: auto;
+242:       padding-bottom: 4px;
+243:     }
+244: 
+245:     .pill {
+246:       font-size: 11px;
+247:       font-weight: 600;
+248:       padding: 4px 10px;
+249:       border-radius: 12px;
+250:       border: 1px solid var(--border-color);
+251:       background: transparent;
+252:       color: var(--text-secondary);
+253:       cursor: pointer;
+254:       white-space: nowrap;
+255:     }
+256: 
+257:     .pill.active {
+258:       background: var(--accent-primary);
+259:       color: #fff;
+260:       border-color: var(--accent-primary);
+261:     }
+262: 
+263:     .component-list {
+264:       flex: 1;
+265:       overflow-y: auto;
+266:       display: flex;
+267:       flex-direction: column;
+268:       gap: 6px;
+269:       padding-right: 4px;
+270:     }
+271: 
+272:     .component-item {
+273:       padding: 10px 12px;
+274:       border-radius: var(--radius-sm);
+275:       border: 1px solid transparent;
+276:       background: rgba(255, 255, 255, 0.02);
+277:       cursor: pointer;
+278:       display: flex;
+279:       align-items: center;
+280:       justify-content: space-between;
+281:       transition: all 0.15s ease;
+282:     }
+283: 
+284:     .component-item:hover {
+285:       background: rgba(255, 255, 255, 0.06);
+286:     }
+287: 
+288:     .component-item.selected {
+289:       background: rgba(99, 102, 241, 0.15);
+290:       border-color: var(--accent-primary);
+291:     }
+292: 
+293:     .comp-info-title {
+294:       font-family: var(--font-mono);
+295:       font-size: 13px;
+296:       font-weight: 600;
+297:       color: #fff;
+298:     }
+299: 
+300:     .comp-info-sub {
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

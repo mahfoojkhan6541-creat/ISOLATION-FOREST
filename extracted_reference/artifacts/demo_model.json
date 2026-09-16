@@ -1,0 +1,202 @@
+{
+  "artifact_version": "1.0.0",
+  "candidate_validation": [
+    {
+      "bias": -0.016180133837075443,
+      "false_negative_count": 2,
+      "false_negative_rate": 0.25,
+      "interval_coverage_90": 0.8928571428571429,
+      "kind": "linear_ridge",
+      "mae": 0.569455148378575,
+      "policy_calibration": {
+        "false_negative_cost": 100,
+        "fitted_on": "grouped training partition only",
+        "mode": "label_calibrated",
+        "objective": {
+          "false_negatives": 2,
+          "false_positives": 101,
+          "flagged": 131,
+          "objective": 313.3,
+          "reviews": 123
+        }
+      },
+      "precision": 0.18181818181818182,
+      "recall": 0.75,
+      "rmse": 0.7308499098013017,
+      "threshold_policy": {
+        "lower_safety_slope": null,
+        "peer_slope_margin_mad": 3.0,
+        "peer_weight": 0.55,
+        "peer_z_reject": 2.25,
+        "peer_z_review": 0.75,
+        "review_risk": 0.3,
+        "safety_slope_description": "remaining_limit: upper=(spec_max-value_24h)/144 and lower=(spec_min-value_24h)/144; absolute: supplied upper/lower slope values; peer_reference: peer slope median \u00b1 MAD margin.",
+        "safety_slope_mode": "remaining_limit",
+        "slope_weight": 0.45,
+        "slope_z_reject": 3.0,
+        "slope_z_review": 1.5,
+        "upper_safety_slope": null
+      }
+    },
+    {
+      "bias": 0.06913217055433434,
+      "false_negative_count": 2,
+      "false_negative_rate": 0.25,
+      "interval_coverage_90": 0.8035714285714286,
+      "kind": "polynomial_ridge",
+      "mae": 0.5213154798137497,
+      "policy_calibration": {
+        "false_negative_cost": 100,
+        "fitted_on": "grouped training partition only",
+        "mode": "label_calibrated",
+        "objective": {
+          "false_negatives": 2,
+          "false_positives": 101,
+          "flagged": 131,
+          "objective": 313.3,
+          "reviews": 123
+        }
+      },
+      "precision": 0.18181818181818182,
+      "recall": 0.75,
+      "rmse": 0.6995713974079404,
+      "threshold_policy": {
+        "lower_safety_slope": null,
+        "peer_slope_margin_mad": 3.0,
+        "peer_weight": 0.55,
+        "peer_z_reject": 2.25,
+        "peer_z_review": 0.75,
+        "review_risk": 0.3,
+        "safety_slope_description": "remaining_limit: upper=(spec_max-value_24h)/144 and lower=(spec_min-value_24h)/144; absolute: supplied upper/lower slope values; peer_reference: peer slope median \u00b1 MAD margin.",
+        "safety_slope_mode": "remaining_limit",
+        "slope_weight": 0.45,
+        "slope_z_reject": 3.0,
+        "slope_z_review": 1.5,
+        "upper_safety_slope": null
+      }
+    }
+  ],
+  "feature_columns": [
+    "value_0h",
+    "value_24h",
+    "delta_0_24",
+    "relative_delta_0_24",
+    "slope_0_24",
+    "peer_robust_z_24h",
+    "slope_robust_z",
+    "peer_percentile_24h",
+    "temperature_c",
+    "voltage_v"
+  ],
+  "model": {
+    "coefficients": [
+      8.765844167142635,
+      3.5795937693243713,
+      0.203888186725688,
+      3.564227799629432,
+      -0.22350812792528996,
+      0.1843306019043019,
+      0.04849480642539608,
+      0.12748657021697996,
+      0.03880621689487013,
+      0.18433060190544628,
+      0.04849480642535481,
+      0.4311152738443944,
+      -0.020509811215193796,
+      -0.023084240738087125,
+      0.06368074854367828,
+      0.08098462816287344,
+      0.04493767818941462,
+      3.468995196948661e-44,
+      0.0,
+      9.06282804833194e-14,
+      -5.827491190600294e-29
+    ],
+    "columns": [
+      "value_0h",
+      "value_24h",
+      "delta_0_24",
+      "relative_delta_0_24",
+      "slope_0_24",
+      "peer_robust_z_24h",
+      "slope_robust_z",
+      "peer_percentile_24h",
+      "temperature_c",
+      "voltage_v"
+    ],
+    "kind": "polynomial_ridge",
+    "residual_quantile_90": 0.9794181456766013,
+    "residual_std": 0.601789259402296,
+    "stats": {
+      "delta_0_24": {
+        "mean": 0.07843421785714293,
+        "std": 0.1775516693317168
+      },
+      "peer_percentile_24h": {
+        "mean": 0.5178571428571429,
+        "std": 0.28900751827957666
+      },
+      "peer_robust_z_24h": {
+        "mean": 2.8078883036253495,
+        "std": 16.201157350536736
+      },
+      "relative_delta_0_24": {
+        "mean": 0.012777442593526995,
+        "std": 0.029639708358960418
+      },
+      "slope_0_24": {
+        "mean": 0.0032680924107142883,
+        "std": 0.007397986222154867
+      },
+      "slope_robust_z": {
+        "mean": 0.14234683729483558,
+        "std": 1.1911295451528032
+      },
+      "temperature_c": {
+        "mean": 125.0,
+        "std": 1.0
+      },
+      "value_0h": {
+        "mean": 8.129375292857143,
+        "std": 7.110393494528095
+      },
+      "value_24h": {
+        "mean": 8.207809510714286,
+        "std": 7.1502299766477835
+      },
+      "voltage_v": {
+        "mean": 3.3000000000000003,
+        "std": 1.0
+      }
+    }
+  },
+  "policy": {
+    "lower_safety_slope": null,
+    "peer_slope_margin_mad": 3.0,
+    "peer_weight": 0.55,
+    "peer_z_reject": 2.25,
+    "peer_z_review": 0.75,
+    "review_risk": 0.2,
+    "safety_slope_description": "remaining_limit: upper=(spec_max-value_24h)/144 and lower=(spec_min-value_24h)/144; absolute: supplied upper/lower slope values; peer_reference: peer slope median \u00b1 MAD margin.",
+    "safety_slope_mode": "remaining_limit",
+    "slope_weight": 0.45,
+    "slope_z_reject": 2.5,
+    "slope_z_review": 1.0,
+    "upper_safety_slope": null
+  },
+  "policy_calibration": {
+    "false_negative_cost": 100,
+    "fitted_on": "grouped training partition only",
+    "mode": "label_calibrated",
+    "objective": {
+      "false_negatives": 2,
+      "false_positives": 171,
+      "flagged": 209,
+      "objective": 390.9,
+      "reviews": 199
+    }
+  },
+  "seed": 26170,
+  "training_data_hash": "291e5a072f75442c61d035569a3eff7a603b9441ac88e1143cb17706cf16adf7",
+  "training_rows": 280
+}

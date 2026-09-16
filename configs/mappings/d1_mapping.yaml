@@ -1,0 +1,113 @@
+mapping_version: "d1_v1"
+source_format: "wide"
+description: "Schema mapping for D1 authentic burn-in dataset"
+
+identity_fields:
+  - source_field: "MaterialID"
+    internal_concept: "component_id"
+    data_type: "string"
+    required: true
+    nullable: false
+
+temporal_fields:
+  - source_field: "StepID"
+    internal_concept: "checkpoint"
+    data_type: "integer"
+    required: true
+    nullable: false
+  - source_field: "duration_ms"
+    internal_concept: "elapsed_time"
+    data_type: "float"
+    required: true
+    nullable: false
+
+metadata_fields:
+  - source_field: "is_test"
+    internal_concept: "split_assignment"
+    data_type: "integer"
+    required: false
+    nullable: true
+    is_model_feature: false
+  - source_field: "target"
+    internal_concept: "evaluation_label"
+    data_type: "integer"
+    required: false
+    nullable: true
+    is_model_feature: false
+
+parameter_fields:
+  - source_field: "feature_1"
+    parameter_key: "param_01"
+    canonical_unit: "arb_norm"
+    data_type: "float"
+    required: true
+  - source_field: "feature_2"
+    parameter_key: "param_02"
+    canonical_unit: "arb_norm"
+    data_type: "float"
+    required: true
+  - source_field: "feature_3"
+    parameter_key: "param_03"
+    canonical_unit: "arb_norm"
+    data_type: "float"
+    required: true
+  - source_field: "feature_4"
+    parameter_key: "param_04"
+    canonical_unit: "arb_norm"
+    data_type: "float"
+    required: true
+  - source_field: "feature_5"
+    parameter_key: "param_05"
+    canonical_unit: "arb_norm"
+    data_type: "float"
+    required: true
+  - source_field: "feature_6"
+    parameter_key: "param_06"
+    canonical_unit: "arb_norm"
+    data_type: "float"
+    required: true
+  - source_field: "feature_7"
+    parameter_key: "param_07"
+    canonical_unit: "arb_norm"
+    data_type: "float"
+    required: true
+  - source_field: "feature_8"
+    parameter_key: "param_08"
+    canonical_unit: "arb_norm"
+    data_type: "float"
+    required: true
+  - source_field: "feature_9"
+    parameter_key: "param_09"
+    canonical_unit: "arb_norm"
+    data_type: "float"
+    required: true
+  - source_field: "feature_10"
+    parameter_key: "param_10"
+    canonical_unit: "arb_norm"
+    data_type: "float"
+    required: true
+  - source_field: "feature_11"
+    parameter_key: "param_11"
+    canonical_unit: "arb_norm"
+    data_type: "float"
+    required: true
+  - source_field: "feature_12"
+    parameter_key: "param_12"
+    canonical_unit: "arb_norm"
+    data_type: "float"
+    required: true
+  - source_field: "feature_13"
+    parameter_key: "param_13"
+    canonical_unit: "arb_norm"
+    data_type: "float"
+    required: true
+  - source_field: "feature_14"
+    parameter_key: "param_14"
+    canonical_unit: "arb_norm"
+    data_type: "float"
+    required: true
+  - source_field: "feature_15"
+    parameter_key: "param_15"
+    canonical_unit: "arb_norm"
+    data_type: "float"
+    required: true

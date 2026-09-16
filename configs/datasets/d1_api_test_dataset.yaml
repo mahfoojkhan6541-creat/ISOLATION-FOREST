@@ -1,0 +1,11 @@
+dataset_id: D1_API_TEST
+intended_tasks:
+- anomaly
+notes: ''
+received_at: '2026-09-16T07:14:52.280237+00:00'
+sha256: 2d04006bbd5e5865ef0fff4c1d38f489af087116438b3c8f7cd0369213aa6c8f
+source_name: D1_API_TEST
+source_path: data/D1.csv
+source_type: csv
+source_version: sha256:2d04006bbd5e
+status: registered
